@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NASA Pictures On Your Birthday</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+    <script defer src="./js/main.js"></script>
+  </head>
+  <body>
+    <header class="header container">
+      <div class="logo">
+        <a class="logo-link" href="#">
+          <img
+            src="https://www.nasa.gov/sites/default/files/thumbnails/image/nasa-logo-web-rgb.png"
+          />
+        </a>
+      </div>
+      <nav>
+        <ul class="nav-list">
+          <li><a href="#howitworks">How it works</a></li>
+          <li><a href="#birthdayPics">Birthday Pictures</a></li>
+          <li><a href="#about">About</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="hero">
+        <div class="hero-content container">
+          <h1>
+            NASA Pictures<br />
+            On Your Birthday
+          </h1>
+          <div></div>
+        </div>
+      </section>
+      <section class="container" id="howitworks"></section>
+      <section class="container" id="birthdayPics">
+        <h2>When is your birthday</h2>
+        <form>
+          <input type="date" />
+          <button class="searchBtn">Buscar</button>
+          <button type="button" class="clear">Clear</button>
+        </form>
+        <div class="imagenes">
+          <!-- Create grid for pictures -->
+          <ol class="imgList"></ol>
+        </div>
+      </section>
+      <section class="container" id="about"></section>
+    </main>
+  </body>
+</html>
