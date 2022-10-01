@@ -122,6 +122,8 @@ button {
   color: white;
 }
 
+
+
 button:hover {
   cursor: pointer;
 }
@@ -132,9 +134,10 @@ button:hover {
   gap: 1rem;
 }
 
-.imagenes {
-  gap: 1rem;
-}
+/* .imagenes {
+  display: flex;
+  align-items: center;
+} */
 
 .newLi {
   height: 10rem;
@@ -146,4 +149,14 @@ button:hover {
 
 .bdImg:hover {
   cursor: pointer;
+}
+
+dialog {
+  padding: auto;
+  margin: auto;
+  width: 40rem;
+}
+
+.dialogTitle {
+  color: red;
 }
