@@ -1,15 +1,16 @@
-const boton = document.querySelector('.searchBtn');
-const lista = document.querySelector('.imgList');
-const clearBtn = document.querySelector('.clear');
+const searchBtn = document.querySelector('.searchBtn');
+const photosGrid = document.querySelector('.imgList');
+const clearBtn = document.querySelector('.clearBtn');
 const dialog = document.querySelector('dialog');
+const dialogCloseBtn = document.querySelector('.dialogCloseBtn');
 let dataObj = [];
 
-boton.addEventListener('click', function (e) {
+searchBtn.addEventListener('click', function (e) {
   e.preventDefault();
   const fecha = document.querySelector('input').value;
   const mesDia = fecha.split('-').slice(1).join('-');
   const year = new Date().getFullYear();
-  lista.innerHTML = '';
+  photosGrid.innerHTML = '';
 
   for (let f = 1995; f <= year; f++) {
     fetch(
@@ -29,30 +30,33 @@ boton.addEventListener('click', function (e) {
         img.classList.add('bdImg');
         img.src = data.hdurl;
         li.appendChild(img);
-        lista.appendChild(li);
+        photosGrid.appendChild(li);
       })
       .catch(err => {
         console.log(`error ${err}`);
       });
   }
 });
-lista.addEventListener('click', function (e) {
+
+photosGrid.addEventListener('click', function (e) {
   let img = e.target.closest('img');
   if (!img) return;
-  // if (img.src === dataObj.img) console.log('same');
-  const dialogImg = document.querySelector('dialog>img');
-  dialogImg.src = img.src;
   dataObj.forEach(obj => {
     if (obj.img === img.src) {
       document.querySelector('.dialogTitle').textContent = obj.title;
       document.querySelector('.dialogDate').textContent = obj.date;
       document.querySelector('.dialogDesc').textContent = obj.desc;
+      document.querySelector('dialog>img').src = obj.img;
     }
   });
 
   dialog.showModal();
 });
 
+dialogCloseBtn.addEventListener('click', () => {
+  dialog.close();
+});
+
 clearBtn.addEventListener('click', () => {
-  lista.innerHTML = '';
+  photosGrid.innerHTML = '';
 });

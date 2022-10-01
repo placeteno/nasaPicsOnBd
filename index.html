@@ -46,20 +46,25 @@
 
       <section class="photosGrid" id="birthdayPics">
         <div class="photosGrid-content container">
-          <h2>When is your birthday</h2>
+          <h2 class="heading">When is your birthday?</h2>
           <form>
-            <input type="date" />
-            <button class="searchBtn">Buscar</button>
-            <button type="button" class="clear">Clear</button>
+            <input type="date" class="dateInput" />
+            <button type="button" class="searchBtn btn">Buscar</button>
+            <button type="button" class="clearBtn btn">Clear</button>
           </form>
           <div class="imagenes">
             <!-- Create grid for pictures -->
             <ol class="imgList"></ol>
           </div>
           <dialog>
-            <h3 class="dialogTitle"></h3>
-            <p class="dialogDate"></p>
-            <p class="dialogDesc"></p>
+            <div class="dialogHeader">
+              <h3 class="dialogTitle"></h3>
+              <span class="dialogCloseBtn">X</span>
+            </div>
+            <div class="dialogContentBox">
+              <p class="dialogDate"></p>
+              <p class="dialogDesc"></p>
+            </div>
             <img class="dialogImg" src="" alt="" />
           </dialog>
         </div>
