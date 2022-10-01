@@ -11,11 +11,16 @@
   <body>
     <header class="header container">
       <div class="logo">
-        <a class="logo-link" href="#">
-          <img
-            src="https://www.nasa.gov/sites/default/files/thumbnails/image/nasa-logo-web-rgb.png"
-          />
-        </a>
+        <div class="logo-img">
+          <a class="logo-link" href="#">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/2/25/Nasa-logo.gif"
+            />
+          </a>
+        </div>
+        <div class="logo-text">
+          <span>Nasa Pictures<br />On Your Birthday</span>
+        </div>
       </div>
       <nav>
         <ul class="nav-list">
@@ -29,25 +34,31 @@
       <section class="hero">
         <div class="hero-content container">
           <h1>
-            NASA Pictures<br />
-            On Your Birthday
+            Awesome Photos<br />
+            For An Awesome Day
           </h1>
           <div></div>
         </div>
       </section>
-      <section class="container" id="howitworks"></section>
-      <section class="container" id="birthdayPics">
-        <h2>When is your birthday</h2>
-        <form>
-          <input type="date" />
-          <button class="searchBtn">Buscar</button>
-          <button type="button" class="clear">Clear</button>
-        </form>
-        <div class="imagenes">
-          <!-- Create grid for pictures -->
-          <ol class="imgList"></ol>
+      <section class="howitworks" id="howitworks">
+        <div class="container"></div>
+      </section>
+
+      <section class="photosGrid" id="birthdayPics">
+        <div class="photosGrid-content container">
+          <h2>When is your birthday</h2>
+          <form>
+            <input type="date" />
+            <button class="searchBtn">Buscar</button>
+            <button type="button" class="clear">Clear</button>
+          </form>
+          <div class="imagenes">
+            <!-- Create grid for pictures -->
+            <ol class="imgList"></ol>
+          </div>
         </div>
       </section>
+
       <section class="container" id="about"></section>
     </main>
   </body>

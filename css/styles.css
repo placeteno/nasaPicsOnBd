@@ -14,13 +14,15 @@ a {
   color: black;
 }
 
-ul {
+ul,
+ol {
   list-style: none;
 }
 
 .container {
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0 2rem;
 }
 
 img {
@@ -35,7 +37,17 @@ img {
 }
 
 .logo {
-  width: 15rem;
+  width: 30rem;
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 8rem;
+}
+
+.logo-text span {
+  font-size: 2rem;
 }
 
 .nav-list {
@@ -69,17 +81,69 @@ h1 {
   color: white;
 }
 
-.imgList {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(20rem, auto))
+/***************
+  HOW IT WORKS 
+****************/
+
+.howitworks {
+  height: 30rem;
 }
 
-.imagenes {
-  height: 400px;
+
+/***************
+  PHOTOS GRID 
+****************/
+
+.photosGrid {
+  background: rgb(0, 0, 0);
+  padding: 4rem 0 10rem 0;
+}
+
+.photosGrid-content {
+  text-align: center;
+
+}
+
+h2 {
+  color: white;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+form {
+  margin-bottom: 2rem;
+}
+
+button {
+  border: none;
+  padding: .5rem 2rem;
+  border-radius: 10px;
+  background: linear-gradient(90deg, rgb(64, 36, 124), rgb(47, 47, 198));
+  color: white;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.imgList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, auto));
   gap: 1rem;
 }
 
-.bdImg {
-  /*height: 50%;*/
+.imagenes {
+  gap: 1rem;
+}
+
+.newLi {
+  height: 10rem;
+  overflow: hidden;
   border-radius: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.bdImg:hover {
+  cursor: pointer;
 }
