@@ -3,12 +3,13 @@ const photosGrid = document.querySelector('.imgList');
 const clearBtn = document.querySelector('.clearBtn');
 const dialog = document.querySelector('dialog');
 const dialogCloseBtn = document.querySelector('.dialogCloseBtn');
+const imagenes = document.querySelector('.imagenes');
 let dataObj = [];
 
 searchBtn.addEventListener('click', function (e) {
   e.preventDefault();
-  const fecha = document.querySelector('input').value;
-  const mesDia = fecha.split('-').slice(1).join('-');
+  const date = document.querySelector('input').value;
+  const mesDia = date.split('-').slice(1).join('-');
   const year = new Date().getFullYear();
   photosGrid.innerHTML = '';
 
@@ -24,13 +25,10 @@ searchBtn.addEventListener('click', function (e) {
           desc: data.explanation,
           img: data.hdurl,
         });
-        const li = document.createElement('li');
-        const img = document.createElement('img');
-        li.classList.add('newLi');
-        img.classList.add('bdImg');
-        img.src = data.hdurl;
-        li.appendChild(img);
-        photosGrid.appendChild(li);
+        const html = `<li class="newLi">
+            <img class="bdImg" src="${data.hdurl}">
+          </li>`;
+        photosGrid.insertAdjacentHTML('beforeend', html);
       })
       .catch(err => {
         console.log(`error ${err}`);

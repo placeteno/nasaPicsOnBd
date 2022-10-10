@@ -196,8 +196,16 @@ dialog::backdrop {
   gap: 1rem;
 }
 
+.dialogCloseBtn {
+  padding: .1rem .8rem;
+  background: transparent;
+  transition: background .2s;
+}
+
 .dialogCloseBtn:hover {
   cursor: pointer;
+  padding: .1rem .8rem;
+  background: rgb(21, 21, 21);
 }
 
 .dialogDate {
