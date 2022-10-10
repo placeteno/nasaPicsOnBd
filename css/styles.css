@@ -114,6 +114,31 @@ form {
   margin-bottom: 2rem;
 }
 
+.loading-message {
+  font-size: 2rem;
+  animation: loading 2s infinite;
+}
+
+.done {
+  animation: none;
+  color: white;
+}
+
+@keyframes loading {
+  0% {
+    color: white;
+  }
+
+  50% {
+    color: red;
+  }
+
+  100% {
+    color: yellow;
+  }
+
+}
+
 .dateInput {
   border: none;
   width: 20rem;
