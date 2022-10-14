@@ -48,7 +48,7 @@ searchBtn.addEventListener('click', function (e) {
         photosGrid.insertAdjacentHTML('beforeend', html);
       })
       .catch(err => {
-        console.log(`error ${err}`);
+        console.log(`error ${err}`); // create error message
       });
   }
   setTimeout(() => {
@@ -58,7 +58,7 @@ searchBtn.addEventListener('click', function (e) {
       loading.style.opacity = 0;
       loading.classList.remove('done');
     }, 2000);
-  }, 1000);
+  }, 5000);
 });
 
 photosGrid.addEventListener('click', function (e) {

@@ -35,12 +35,16 @@ img {
   max-width: 100%;
 }
 
+section {
+  padding: 10rem 0;
+}
+
 /***************
   HEADER
 ****************/
 .header {
   position: relative;
-  height: 100vh;
+  height: 95vh;
   background: linear-gradient(black, rgba(0, 0, 0, 0.1) 60%), url(/imgs/backrground/mountain-stars.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -112,24 +116,34 @@ img {
   grid-template-columns: repeat(auto-fit, minmax(35rem, auto));
   justify-content: center;
   gap: 5rem;
+  padding: 10rem 0;
 }
 
-.howitworks-grid__item {}
+.howitworks-grid__item {
+  position: relative;
+}
 
 .item-number {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background-color: pink;
   width: 10rem;
   height: 10rem;
   border-radius: 50%;
-  font-size: 5rem;
-
+  font-size: 25rem;
+  color: #eee
 }
 
 .item-heading {
-  font-size: 3rem;
+  font-size: 3.5rem;
+  text-align: center;
+  line-height: 1.1;
+  color: #555
 }
 
 
