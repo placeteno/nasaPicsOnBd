@@ -25,14 +25,10 @@ searchBtn.addEventListener('click', function (e) {
   const mesDia = date.split('-').slice(1).join('-');
   const year = new Date().getFullYear();
   photosGrid.innerHTML = '';
-  console.log(loading);
   loading.style.opacity = 1;
   loading.innerHTML = 'Loading';
 
   for (let f = 1995; f <= year; f++) {
-    // fetch(
-    //   `https://api.nasa.gov/planetary/apod?api_key=SbevutgF6LLMeUgl7sZo4XaPLdxsltwAp68fARON&date=${f}-${mesDia}`
-    // )
     getPicture(f, mesDia)
       .then(res => res.json())
       .then(data => {
@@ -40,10 +36,14 @@ searchBtn.addEventListener('click', function (e) {
           date: data.date,
           title: data.title,
           desc: data.explanation,
-          img: data.hdurl,
+          img: data.media_type === 'image' ? data.hdurl : data.url,
         });
         const html = `<li class="newLi">
-            <img class="bdImg" src="${data.hdurl}">
+        ${
+          data.media_type === 'image'
+            ? `<img class="bdImg" src="${data.hdurl}"> </img>`
+            : `<iframe class="bdImg" src="${data.url}"></iframe>`
+        }
           </li>`;
         photosGrid.insertAdjacentHTML('beforeend', html);
       })
@@ -58,7 +58,7 @@ searchBtn.addEventListener('click', function (e) {
       loading.style.opacity = 0;
       loading.classList.remove('done');
     }, 2000);
-  }, 5000);
+  }, 1000);
 });
 
 photosGrid.addEventListener('click', function (e) {

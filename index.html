@@ -9,48 +9,62 @@
     <script defer src="./js/main.js"></script>
   </head>
   <body>
-    <header class="header container">
-      <div class="logo">
-        <div class="logo-img">
-          <a class="logo-link" href="#">
-            <img
-              src="https://upload.wikimedia.org/wikipedia/commons/2/25/Nasa-logo.gif"
-            />
-          </a>
-        </div>
-        <div class="logo-text">
-          <span>Nasa Pictures<br />On Your Birthday</span>
-        </div>
-      </div>
-      <nav>
+    <header class="header">
+      <nav class="header-nav">
         <ul class="nav-list">
+          <li><a href="#">Home</a></li>
           <li><a href="#howitworks">How it works</a></li>
+          <li>
+            <div class="logo">
+              <div class="logo-img">
+                <a class="logo-link" href="#">
+                  <img src="imgs/logoCool.png" />
+                </a>
+              </div>
+            </div>
+          </li>
           <li><a href="#birthdayPics">Birthday Pictures</a></li>
           <li><a href="#about">About</a></li>
         </ul>
       </nav>
-    </header>
-    <main>
-      <section class="hero">
+      <div class="hero">
         <div class="hero-content container">
-          <h1>
-            Awesome Photos<br />
-            For An Awesome Day
-          </h1>
-          <div></div>
+          <h1 class="hero-title">Awesome Photos For An Awesome Day</h1>
         </div>
-      </section>
+      </div>
+    </header>
+
+    <!-- <img src="https://upload.wikimedia.org/wikipedia/commons/2/25/Nasa-logo.gif"/> -->
+    <main>
       <section class="howitworks" id="howitworks">
-        <div class="container"></div>
+        <div class="container">
+          <h2 class="secondary-heading">How it works</h2>
+          <div class="howitworks-grid">
+            <article class="howitworks-grid__item">
+              <span class="item-number">1</span>
+              <h3 class="item-heading">Enter your birthday this year</h3>
+            </article>
+            <article class="howitworks-grid__item">
+              <span class="item-number">2</span>
+              <h3 class="item-heading">Wait for your photos from NASA</h3>
+            </article>
+            <article class="howitworks-grid__item">
+              <span class="item-number">3</span>
+              <h3 class="item-heading">Click the photo and learn!</h3>
+            </article>
+          </div>
+        </div>
       </section>
 
       <section class="photosGrid" id="birthdayPics">
         <div class="photosGrid-content container">
-          <h2 class="heading">When is your birthday?</h2>
+          <h2 class="secondary-heading">When is your birthday?</h2>
           <form>
             <input type="date" class="dateInput" />
-            <button type="button" class="searchBtn btn">Buscar</button>
-            <button type="button" class="clearBtn btn">Clear</button>
+            <div>
+              <button type="button" class="searchBtn btn">Buscar</button>
+              <button type="button" class="clearBtn btn">Clear</button>
+            </div>
           </form>
           <div class="imagenes">
             <!-- Create grid for pictures -->
