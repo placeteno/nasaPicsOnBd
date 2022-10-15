@@ -5,6 +5,7 @@ const clearBtn = document.querySelector('.clearBtn');
 const dialog = document.querySelector('dialog');
 const dialogCloseBtn = document.querySelector('.dialogCloseBtn');
 const imagenes = document.querySelector('.imagenes');
+const currentYear = document.querySelector('.currentYear');
 let dataObj = [];
 
 const getPicture = function (year, mesDia) {
@@ -83,3 +84,12 @@ dialogCloseBtn.addEventListener('click', () => {
 clearBtn.addEventListener('click', () => {
   photosGrid.innerHTML = '';
 });
+
+currentYear.textContent = new Date().getFullYear();
+
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement(
+    { pageLanguage: 'en' },
+    'google_translate_element'
+  );
+}

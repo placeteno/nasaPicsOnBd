@@ -1,3 +1,11 @@
+@media screen and (max-width: 1189px) {
+  .howitworks-grid__item:nth-of-type(3) {
+    grid-column: 1 / -1;
+    justify-content: center;
+  }
+
+}
+
 @media screen and (max-width: 500px) {
   .nav-list {
     justify-content: flex-start;
@@ -14,7 +22,7 @@
   }
 
   .hero-title {
-    font-size: 5rem;
+    font-size: 4.2rem;
   }
 
   .dateInput {
@@ -24,5 +32,9 @@
   .btn {
     padding: 1rem 6rem;
     font-size: 1.3rem;
+  }
+
+  .about-contentBox {
+    flex-direction: column;
   }
 }
