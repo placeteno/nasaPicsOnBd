@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>NASA Pictures On Your Birthday</title>
     <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/mediaq.css" />
     <script defer src="./js/main.js"></script>
   </head>
   <body>
@@ -14,7 +15,7 @@
         <ul class="nav-list">
           <li><a href="#">Home</a></li>
           <li><a href="#howitworks">How it works</a></li>
-          <li>
+          <li class="navLogo">
             <div class="logo">
               <div class="logo-img">
                 <a class="logo-link" href="#">
@@ -28,7 +29,7 @@
         </ul>
       </nav>
       <div class="hero">
-        <div class="hero-content container">
+        <div class="hero-content">
           <h1 class="hero-title">Awesome Photos For An Awesome Day</h1>
         </div>
       </div>
@@ -48,7 +49,7 @@
 
             <h2 class="secondary-heading">How it works</h2>
             <p class="howitworks-description">
-              Search the vast NASA photographic archives every photo or video
+              Search in NASA's vast photographic archives every photo or video
               that has been published on your birthday! After you enter your
               date of birth in the current year below, you will receive a
               collection of images dating back to 1995. Every photo comes with a
@@ -58,7 +59,7 @@
               Find the pictures NASA has published in three easy steps!
             </p>
           </div>
-          <div class="howitworks-grid">
+          <div class="howitworks-grid grid">
             <article class="howitworks-grid__item">
               <span class="item-number">1</span>
               <h3 class="item-heading">Enter your birthday this year</h3>
@@ -80,15 +81,15 @@
           <h2 class="secondary-heading">When is your birthday?</h2>
           <form>
             <input type="date" class="dateInput" />
-            <div>
-              <button type="button" class="searchBtn btn">Buscar</button>
+            <div class="form-buttons">
+              <button type="button" class="searchBtn btn">Search</button>
               <button type="button" class="clearBtn btn">Clear</button>
             </div>
           </form>
           <div class="imagenes">
             <!-- Create grid for pictures -->
             <p class="loading-message"></p>
-            <ol class="imgList"></ol>
+            <ol class="imgList grid"></ol>
           </div>
           <dialog>
             <div class="dialogHeader">
@@ -113,7 +114,7 @@
           </div>
           <p>
             Ever single day since 1995, NASA has been publishing astonishing
-            pictures and videos of the universide from its vast photograph
+            pictures and videos of the universe from its vast photographic
             collection taken by Mars rovers, the Hubble Space Telescope,
             satellites, and astrophotographers from all around the planet. These
             images and videos can be enjoyed daily visiting the the

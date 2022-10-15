@@ -1,0 +1,28 @@
+@media screen and (max-width: 500px) {
+  .nav-list {
+    justify-content: flex-start;
+    padding-left: 2rem;
+    ;
+  }
+
+  .nav-list li:not(li:nth-child(3)) {
+    display: none;
+  }
+
+  .hero {
+    width: 80%;
+  }
+
+  .hero-title {
+    font-size: 5rem;
+  }
+
+  .dateInput {
+    width: 30rem;
+  }
+
+  .btn {
+    padding: 1rem 6rem;
+    font-size: 1.3rem;
+  }
+}

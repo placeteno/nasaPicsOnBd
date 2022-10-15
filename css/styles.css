@@ -25,11 +25,6 @@ ol {
   list-style: none;
 }
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 2rem;
-}
 
 img {
   max-width: 100%;
@@ -37,6 +32,16 @@ img {
 
 section {
   padding: 10rem 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.grid {
+  display: grid;
 }
 
 /***************
@@ -78,12 +83,10 @@ section {
 }
 
 .hero-title {
-  /* font-family: "Merriweather", serif; */
   font-size: 6rem;
   text-align: center;
   line-height: 1.1;
   color: white;
-  /* transition: all .2s; */
   animation: scale 1s;
 }
 
@@ -134,7 +137,6 @@ section {
 }
 
 .howitworks-grid {
-  display: grid;
   grid-template-columns: repeat(auto-fit, minmax(35rem, auto));
   justify-content: center;
   gap: 5rem;
@@ -178,7 +180,6 @@ section {
 
 .photosGrid {
   background: rgb(15, 15, 15);
-  padding: 4rem 0 10rem 0;
 }
 
 .photosGrid-content {
@@ -241,23 +242,29 @@ form {
   color: rgb(64, 36, 124);
 }
 
+
+
+.form-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
 .btn {
   border: none;
   padding: 1rem 8rem;
   border-radius: 10px;
   background: linear-gradient(90deg, rgb(64, 36, 124), rgb(47, 47, 198));
   color: white;
-
 }
 
 .btn:hover {
   cursor: pointer;
   background: linear-gradient(90deg, #533a89, #4444cc);
-
 }
 
+
+
 .imgList {
-  display: grid;
   grid-template-columns: repeat(auto-fit, minmax(30rem, auto));
   gap: 2rem;
 }
@@ -281,7 +288,7 @@ dialog {
   height: 80rem;
   border: none;
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
-  background: rgb(21, 21, 21);
+  background: rgb(35, 35, 35);
   color: white;
 }
 
@@ -294,11 +301,11 @@ dialog::backdrop {
   justify-content: space-between;
   align-items: center;
   padding: 2.5rem;
-  background: rgb(42, 42, 42);
+  background: rgb(50, 50, 50);
 }
 
 .dialogTitle {
-  color: lightblue;
+  color: #a092be;
   text-align: left;
   font-size: 3rem;
 }
@@ -321,7 +328,7 @@ dialog::backdrop {
 .dialogCloseBtn:hover {
   cursor: pointer;
   padding: .1rem .8rem;
-  background: rgb(21, 21, 21);
+  background: rgb(35, 35, 35);
 }
 
 .dialogDate {
