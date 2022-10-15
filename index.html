@@ -13,15 +13,15 @@
     <link rel="stylesheet" href="./css/styles.css" />
     <link rel="stylesheet" href="./css/mediaq.css" />
 
-    <script
+    <!-- <script
       type="text/javascript"
       src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
-    ></script>
+    ></script> -->
 
     <script defer src="./js/main.js"></script>
   </head>
   <body>
-    <header class="header">
+    <header class="header flex">
       <nav class="header-nav">
         <ul class="nav-list">
           <li><a href="#">Home</a></li>
@@ -39,6 +39,36 @@
           <li><a href="#about">About</a></li>
         </ul>
       </nav>
+      <div class="mobNavBox">
+        <button class="openMobNav">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-6 h-6 btn-icon"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+            />
+          </svg>
+        </button>
+      </div>
+
+      <aside class="mobileNav">
+        <ul class="nav-list-mob | flex">
+          <li>
+            <button class="closeMobNav">X</button>
+          </li>
+          <li><a href="#">Home</a></li>
+          <li><a href="#howitworks">How it works</a></li>
+          <li><a href="#photosGrid">Birthday Pictures</a></li>
+          <li><a href="#about">About</a></li>
+        </ul>
+      </aside>
       <div class="hero">
         <div class="hero-content">
           <h1 class="hero-title">Awesome Photos <br />For An Awesome Day</h1>
@@ -50,7 +80,7 @@
               viewBox="0 0 24 24"
               stroke-width="1.5"
               stroke="currentColor"
-              class="w-6 h-6 hero-btn-icon"
+              class="w-6 h-6 btn-icon"
             >
               <path
                 stroke-linecap="round"

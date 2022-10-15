@@ -58,6 +58,8 @@ section {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom;
+  justify-content: center;
+  padding: 2rem;
 }
 
 .logo img,
@@ -74,6 +76,19 @@ section {
 
 .nav-list li a {
   font-size: 2.5rem;
+}
+
+.mobileNav {
+  display: none;
+}
+
+.mobNavBox {
+  display: none;
+
+}
+
+.openMobNav svg {
+  margin: 0;
 }
 
 /***************
@@ -105,7 +120,7 @@ section {
   animation: moveFromBelow 1s 0.5s backwards;
 }
 
-.hero-btn-icon {
+.btn-icon {
   width: 2rem;
   margin-left: 1rem;
   transition: all .2s;
@@ -115,7 +130,7 @@ section {
   color: #ddd;
 }
 
-.hero-btn:hover .hero-btn-icon {
+.hero-btn:hover .btn-icon {
   transform: translateX(10px);
 }
 

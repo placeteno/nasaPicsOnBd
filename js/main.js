@@ -6,8 +6,11 @@ const dialog = document.querySelector('dialog');
 const dialogCloseBtn = document.querySelector('.dialogCloseBtn');
 const imagenes = document.querySelector('.imagenes');
 const currentYear = document.querySelector('.currentYear');
+const mobileNav = document.querySelector('.mobileNav');
+const openMobNav = document.querySelector('.openMobNav');
 let dataObj = [];
 
+// Get picture from NASA
 const getPicture = function (year, mesDia) {
   return new Promise(function (resolve, reject) {
     const ok = fetch(
@@ -62,6 +65,7 @@ searchBtn.addEventListener('click', function (e) {
   }, 5000);
 });
 
+// Click on picture and open modal with info
 photosGrid.addEventListener('click', function (e) {
   let img = e.target.closest('img');
   if (!img) return;
@@ -73,7 +77,6 @@ photosGrid.addEventListener('click', function (e) {
       document.querySelector('dialog>img').src = obj.img;
     }
   });
-
   dialog.showModal();
 });
 
@@ -85,8 +88,21 @@ clearBtn.addEventListener('click', () => {
   photosGrid.innerHTML = '';
 });
 
+// Mobile nav behavior
+openMobNav.addEventListener('click', () => {
+  mobileNav.classList.add('open');
+});
+
+mobileNav.addEventListener('click', e => {
+  const el = e.target.closest('li');
+  if (!el) return;
+  else mobileNav.classList.remove('open');
+});
+
+// Get current year
 currentYear.textContent = new Date().getFullYear();
 
+// Google Translate API
 function googleTranslateElementInit() {
   new google.translate.TranslateElement(
     { pageLanguage: 'en' },
