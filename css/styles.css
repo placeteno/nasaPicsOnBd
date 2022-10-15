@@ -202,6 +202,7 @@ section {
   position: relative;
   height: 18rem;
   display: flex;
+  justify-content: center;
   align-items: center;
 }
 
@@ -297,8 +298,6 @@ form {
   color: rgb(64, 36, 124);
 }
 
-
-
 .form-buttons {
   display: flex;
   gap: 1rem;
@@ -316,8 +315,6 @@ form {
   cursor: pointer;
   background: linear-gradient(90deg, #533a89, #4444cc);
 }
-
-
 
 .imgList {
   grid-template-columns: repeat(auto-fit, minmax(30rem, auto));

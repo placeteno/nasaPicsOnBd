@@ -1,7 +1,6 @@
 @media screen and (max-width: 1189px) {
   .howitworks-grid__item:nth-of-type(3) {
     grid-column: 1 / -1;
-    justify-content: center;
   }
 
 }
@@ -87,8 +86,6 @@
   .hero {
     width: 80%;
   }
-
-
 
   .dateInput {
     width: 30rem;
