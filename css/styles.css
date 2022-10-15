@@ -44,17 +44,17 @@ section {
 ****************/
 .header {
   position: relative;
-  height: 95vh;
-  background: linear-gradient(black, rgba(0, 0, 0, 0.1) 60%), url(/imgs/backrground/mountain-stars.jpg);
+  height: 100vh;
+  background: linear-gradient(black, rgba(0, 0, 0, 0.1) 60%), url(../imgs/backrground/mountain-stars.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom;
 }
 
-.logo img {
+.logo img,
+.nasaLogo img {
   width: 15rem;
 }
-
 
 .nav-list {
   display: flex;
@@ -107,8 +107,30 @@ section {
   HOW IT WORKS 
 ****************/
 
-.howitworks h2 {
+.howitworks {
+  background: 584e59;
+}
+
+.howitworks-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 5rem;
+}
+
+.howitworks .secondary-heading {
   color: black;
+}
+
+.nasaLogo img:first-child {
+  margin-right: 2rem;
+}
+
+.howitworks-description {
+  text-align: center;
+  font-size: 2rem;
+  line-height: 1.4;
 }
 
 .howitworks-grid {
@@ -116,11 +138,14 @@ section {
   grid-template-columns: repeat(auto-fit, minmax(35rem, auto));
   justify-content: center;
   gap: 5rem;
-  padding: 10rem 0;
+  padding: 5rem 0;
 }
 
 .howitworks-grid__item {
   position: relative;
+  height: 18rem;
+  display: flex;
+  align-items: center;
 }
 
 .item-number {
@@ -152,7 +177,7 @@ section {
 ****************/
 
 .photosGrid {
-  background: rgb(0, 0, 0);
+  background: rgb(15, 15, 15);
   padding: 4rem 0 10rem 0;
 }
 
@@ -177,7 +202,7 @@ form {
 
 .loading-message {
   font-size: 2rem;
-  animation: loading 2s infinite;
+  animation: loading 2s ease-in-out infinite;
 }
 
 .done {
@@ -190,14 +215,18 @@ form {
     color: white;
   }
 
-  50% {
-    color: red;
+  25% {
+    color: #533a89;
+  }
+
+  75% {
+    color: #4444cc;
   }
 
   100% {
-    color: yellow;
-  }
+    color: white;
 
+  }
 }
 
 .dateInput {
@@ -214,14 +243,17 @@ form {
 
 .btn {
   border: none;
-  padding: 1rem 6rem;
+  padding: 1rem 8rem;
   border-radius: 10px;
   background: linear-gradient(90deg, rgb(64, 36, 124), rgb(47, 47, 198));
   color: white;
+
 }
 
 .btn:hover {
   cursor: pointer;
+  background: linear-gradient(90deg, #533a89, #4444cc);
+
 }
 
 .imgList {
@@ -265,10 +297,6 @@ dialog::backdrop {
   background: rgb(42, 42, 42);
 }
 
-.dialogHeader span {
-  font-size: 2rem;
-}
-
 .dialogTitle {
   color: lightblue;
   text-align: left;
@@ -284,7 +312,7 @@ dialog::backdrop {
 }
 
 .dialogCloseBtn {
-  font-size: 1.6rem;
+  font-size: 3rem;
   padding: .1rem .8rem;
   background: transparent;
   transition: background .2s;
